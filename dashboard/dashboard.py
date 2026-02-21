@@ -51,9 +51,12 @@ def create_rfm_df(df):
 # LOAD DATA
 # ==========================================
 # Load data utama
-all_df = pd.read_csv("all_data.csv")
+#all_df = pd.read_csv("all_data.csv")
+all_df = pd.read_csv("https://github.com/mpnabil95/Data_Analyst_Project-_E-Commerce_Public_Dataset/blob/29459b74e3c34a820b3b518b356c8e53423dc754/dashboard/all_data.csv?raw=true")
+
 # Load data geolokasi untuk peta
-geo_df = pd.read_csv("geolocation_dataset.csv")
+#geo_df = pd.read_csv("geolocation_dataset.csv")
+geo_df = pd.read_csv("https://github.com/mpnabil95/Data_Analyst_Project-_E-Commerce_Public_Dataset/blob/29459b74e3c34a820b3b518b356c8e53423dc754/dashboard/geolocation_dataset.csv?raw=true")
 
 # Membersihkan data geolokasi (Drop duplicates)
 geo_df.drop_duplicates(subset='geolocation_zip_code_prefix', keep='first', inplace=True)
